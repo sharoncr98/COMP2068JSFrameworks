@@ -20,5 +20,8 @@ prompt.get([userSelection], function (err, result) {
     } else if (numberValue >= 0.68 && numberValue <= 1.00){
         computerSelection = "ROCK";
     }
+    //displaying both user and computer choices
+    console.log(`You chose: ${userSelection}`);
+    console.log(`And Computer chose: ${computerSelectionSelection}`);
 });
 

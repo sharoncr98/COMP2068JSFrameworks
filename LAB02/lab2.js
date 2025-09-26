@@ -13,16 +13,16 @@ prompt.get(['userSelection'], function (err, result) {
     let computerSelection = "";
 
     //setting the paper,scissors and rock values
-    if(numberValue >= 0.00 && numberValue <= 0.34){
+    if(numberValue >= 0.00 && numberValue < 0.35){
         computerSelection = "PAPER";
-    } else if (numberValue >= 0.35 && numberValue <= 0.67){
+    } else if (numberValue >= 0.35 && numberValue < 0.68){
         computerSelection = "SCISSORS";
     } else if (numberValue >= 0.68 && numberValue <= 1.00){
         computerSelection = "ROCK";
     }
     //displaying both user and computer choices
     console.log(`You chose: ${userSelection}`);
-    console.log(`And Computer chose: ${computerSelectionSelection}`);
+    console.log(`And Computer chose: ${computerSelection}`);
 
     //determining who wins
     if (userSelection === computerSelection){

@@ -5,7 +5,7 @@ var prompt = require('prompt');
 prompt.start();
 //using prompt to get the users input and store it as userSelection as instructed
 //i have made the input from the user convert to upper case just in case.
-prompt.get([userSelection], function (err, result) {
+prompt.get(['userSelection'], function (err, result) {
     let userSelection = result.userSelection.toUpperCase();
     //create a random value between 0.0->1.0 using the random function.
     //assigning computerSelect a placeholder for future value.
@@ -23,5 +23,31 @@ prompt.get([userSelection], function (err, result) {
     //displaying both user and computer choices
     console.log(`You chose: ${userSelection}`);
     console.log(`And Computer chose: ${computerSelectionSelection}`);
-});
+
+    //determining who wins
+    if (userSelection === computerSelection){
+        console.log("It's a tie");
+    }
+    if (userSelection === "ROCK" && computerSelection === "SCISSORS") {
+         console.log("User Wins"); 
+        }
+    if (userSelection === "PAPER" && computerSelection === "ROCK") {
+         console.log("User Wins"); 
+        }
+    if (userSelection === "SCISSORS" && computerSelection === "PAPER") {
+         console.log("User Wins");  
+        }
+    if (userSelection === "ROCK" && computerSelection === "PAPER") {
+         console.log("Computer Wins"); 
+        }
+    if (userSelection === "PAPER" && computerSelection === "SCISSORS") {
+         console.log("Computer Wins"); 
+        }
+    if (userSelection === "SCISSORS" && computerSelection === "ROCK") {
+         console.log("Computer Wins"); 
+        }
+    
+
+
+}); 
 

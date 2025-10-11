@@ -1,8 +1,77 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-a {
-  color: #00B7FF;
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #d8cff1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: rgb(14, 10, 10);
+}
+header{
+  background-color: #441752;
+  padding: 18px 0;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+header a,
+header a:visited,
+header a:link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+header nav a:hover {
+  color: #EFB6C8;
+}
+main {
+  flex-grow: 1;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+main h1,
+main h2,
+main h3 {
+  color: #441752;
+  margin-bottom: 20px;
+}
+footer {
+  background-color: #441752;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+footer a,
+footer a:link,
+footer a:visited {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: #EFB6C8;
+}
+.home-page h1 {
+  color: #EFB6C8;
+}
+.about-page h1 {
+  color: #FFC8E7;
+}
+.projects-page h1 {
+  color: #FFD9F0;
+}
+.contact-page h1 {
+  color: #FFE0F5;
 }

@@ -75,3 +75,55 @@ footer a:hover {
 .contact-page h1 {
   color: #FFE0F5;
 }
+
+/* adding the specific css for the projects page */
+.project-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.project-item {
+  text-align: center;
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.project-item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+.project-item h3 {
+  margin-top: 10px;
+  color: #441752;
+  font-size: 1.1rem;
+}
+
+.contact-page {
+  text-align: center;
+  color: #441752;
+  background-color: #d8cff1;
+  padding: 60px 20px;
+  flex-grow: 1;
+}
+
+.contact-info a {
+  color: #441752;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #EFB6C8;
+}

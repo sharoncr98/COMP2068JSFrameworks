@@ -1,3 +1,4 @@
+/*styling the base of all pages with some hover effects and purple color scheme */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,6 +12,7 @@ body {
   flex-direction: column;
   color: rgb(14, 10, 10);
 }
+/*header styling for all pages */
 header{
   background-color: #441752;
   padding: 18px 0;
@@ -45,6 +47,7 @@ main h3 {
   color: #441752;
   margin-bottom: 20px;
 }
+/*footer styling for all pages */
 footer {
   background-color: #441752;
   color: white;
@@ -108,7 +111,7 @@ footer a:hover {
   color: #441752;
   font-size: 1.1rem;
 }
-
+/* specific styling for contact me pages */
 .contact-page {
   text-align: center;
   color: #441752;

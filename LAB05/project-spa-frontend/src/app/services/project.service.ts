@@ -19,4 +19,9 @@ export class ProjectService {
   deleteProject(_id: any) {
     return this.http.delete('http://localhost:3000/api/projects' + _id);
   }
+
+  // update project
+  updateProject(selectedProject: any) {
+    return this.http.put('http://localhost:3000/api/projects', selectedProject);
+  }
 }

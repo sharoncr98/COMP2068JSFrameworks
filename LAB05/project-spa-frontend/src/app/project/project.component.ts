@@ -56,7 +56,17 @@ export class ProjectComponent {
     }
 
     updateProject(){
-
+      let selectedProject = {
+        _id: this._id,
+        name: this.name,
+        dueDate: this.dueDate,
+        course: this.course
+      }
+      //pass to the service and clear form
+      this.projectService.updateProject(selectedProject).subscribe(response =>{
+        this.getProjects();
+      })
+      this.clearForm();
     }
     
     clearForm(): void {

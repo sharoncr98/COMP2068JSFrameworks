@@ -2,18 +2,16 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 //connecting to mongodb using mongoose and encryption
 const UserSchema = new mongoose.Schema({
-  email: { type: String, required: true, unique: true, lowercase: true },
-  password: { type: String, required: true },
-  name: { type: String }
+  email: String,
+  password: String,
+  name: String
 });
-//hashing the password
-UserSchema.pre("save", async function(next){
-  if(!this.isModified("password")) return next();
-  const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
+UserSchema.pre("save", async function(next) {
+  if (!this.isModified("password")) return next();
+  this.password = await bcrypt.hash(this.password, 10);
   next();
 });
-UserSchema.methods.comparePassword = function(candidate){
+UserSchema.methods.comparePassword = function(candidate) {
   return bcrypt.compare(candidate, this.password);
 };
 

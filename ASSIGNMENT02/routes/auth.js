@@ -15,9 +15,11 @@ router.post('/login', ensureGuest, passport.authenticate('local', {
   failureRedirect: '/auth/login',
   failureFlash: true
 }));
+//register
 router.get('/register', ensureGuest, (req, res) => {
   res.render('auth/register', { title: 'Register' });
 });
+//error handling
 router.post('/register', ensureGuest, async (req, res) => {
   try {
     const { username, email, password, confirmPassword } = req.body;

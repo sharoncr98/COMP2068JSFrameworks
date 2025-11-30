@@ -20,9 +20,12 @@ require("./config/passport")(passport);
 
 //MongoDB
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error(err));
+  .catch((err) => console.error("MongoDB connection error:", err));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 //parsing JSON

@@ -1,44 +1,72 @@
-Wellness Tracker App:
+# Wellness Tracker App
 
-Using Express, MongoDB & Mongoose, Passport for Authentication, Bootstrap and Custom CSS for design and Handlebars.
-Additional Features: Chart.js - for showing analytics and chars
-                     OpenWeather API - for weather widget (in the dashboard page)
-                     Axios - 3rd party api integration
-                     bcrypt - hashing passwords
+[Live App Link](https://comp2068jsframeworks-assignment02-fh4s.onrender.com)
 
-After the user creates and account and logins, he will see the main 3 cards: Workouts, meals, and mood.
+---
 
-Workouts:
-Create, edit or delete them as needed. After the initial creation of the record is complete (type, duration, and date) - the user can go back to the Workouts screen and Edit the entry.
-When editing, it is possible to provide additional information such as: calories and Notes.
+## Technologies Used
+- **Backend:** Express, MongoDB & Mongoose, Passport for Authentication  
+- **Frontend:** Bootstrap, Handlebars, Custom CSS  
+- **Additional Features:**
+  - Chart.js – for showing analytics and charts  
+  - OpenWeather API – for weather widget (dashboard page)  
+  - Axios – 3rd party API integration  
+  - bcrypt – hashing passwords  
 
-Meals:
-Create, edit or delete them as needed. After the initial creation of the record is complete (name, calories, and date) - the user can go back to the Workouts screen and Edit the entry.
-When editing, it is possible to provide additional information such as: protein, carbs, fats, meal type (dropdown), and notes.
+---
 
-Mood:
-Create, edit or delete them as needed. After the initial creation of the record is complete (select mood from a dropdown, notes, and date) - the user can go back to the Workouts screen and Edit the entry.
-When editing, it is possible to provide additional information such as: intensity (scale of 1-10).
+## Overview
+After the user creates an account and logs in, they will see the main 3 cards: **Workouts**, **Meals**, and **Mood**.
 
-The Dashboard:
-Includes the OpenWeather widget showing current weather and condition.
+---
 
 Card display:
- * Total workouts this week
- * Total meals this week
- * Number of mood entries
- * Calories burned
- * Calories consumed
+## Workouts
+- Create, edit, or delete workout records.  
+- Initial creation: type, duration, and date.  
+- Editing allows adding additional information: calories and notes.  
 
-Charts display:
- * Workout duration - last 7 days
- * Daily calories - last 7 days
- * Mood distribution - last 30 days
- * Recent activity - mixed
+---
 
- References for API's:
- https://openweathermap.org/api
- https://openweathermap.org/current
- https://www.chartjs.org/docs/latest/
+## Meals
+- Create, edit, or delete meal records.  
+- Initial creation: name, calories, and date.  
+- Editing allows adding: protein, carbs, fats, meal type (dropdown), and notes.  
 
+---
 
+## Mood
+- Create, edit, or delete mood records.  
+- Initial creation: mood (dropdown), notes, and date.  
+- Editing allows adding: intensity (scale of 1–10).  
+
+---
+
+## The Dashboard
+- Includes the OpenWeather widget showing current weather and conditions.  
+
+**Card Display:**
+- Total workouts this week  
+- Total meals this week  
+- Number of mood entries  
+- Calories burned  
+- Calories consumed  
+
+**Charts Display:**
+- Workout duration – last 7 days  
+- Daily calories – last 7 days  
+- Mood distribution – last 30 days  
+- Recent activity – mixed  
+
+---
+
+## References for APIs and Sources
+- [OpenWeather API](https://openweathermap.org/api)  
+- [OpenWeather Current Weather](https://openweathermap.org/current)  
+- [Chart.js Documentation](https://www.chartjs.org/docs/latest/)  
+- [Passport.js Password How-To](https://www.passportjs.org/howtos/password/)  
+
+---
+
+## CSS Inspiration
+- [Pinterest](https://www.pinterest.com/pin/985231164733878/)  

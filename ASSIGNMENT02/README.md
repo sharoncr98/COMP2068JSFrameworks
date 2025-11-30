@@ -20,7 +20,6 @@ After the user creates an account and logs in, they will see the main 3 cards: *
 
 ---
 
-Card display:
 ## Workouts
 - Create, edit, or delete workout records.  
 - Initial creation: type, duration, and date.  

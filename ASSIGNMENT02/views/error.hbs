@@ -1,3 +1,8 @@
-<h1>{{message}}</h1>
-<h2>{{error.status}}</h2>
-<pre>{{error.stack}}</pre>
+<div class="container text-center mt-5">
+  <h1>{{message}}</h1>
+  <h2>{{error.status}}</h2>
+  {{#if error.stack}}
+    <pre class="text-start">{{error.stack}}</pre>
+  {{/if}}
+  <a href="/" class="btn btn-primary mt-3">Back To Home</a>
+</div>

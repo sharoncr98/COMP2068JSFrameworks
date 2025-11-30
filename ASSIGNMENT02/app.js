@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 const mongoose = require("mongoose");
 const flash = require("connect-flash");
-
+const authRouter = require('./routes/auth');
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 

@@ -1,0 +1,36 @@
+<h1>{{title}}</h1>
+<div class="card">
+  <div class="card-body">
+    <form method="POST" action="/mood/edit/{{mood._id}}">
+      <div class="mb-3">
+        <label for="mood" class="form-label">How are you feeling?</label>
+        <select id="mood" name="mood" class="form-control" required>
+          <option value="">Select mood:</option>
+          <option value="happy">Happy</option>
+          <option value="sad">Sad</option>
+          <option value="anxious">Anxious</option>
+          <option value="calm">Calm</option>
+          <option value="energetic">Energetic</option>
+          <option value="tired">Tired</option>
+          <option value="angry">Angry</option>
+          <option value="stressed">Stressed</option>
+          <option value="relaxed">Relaxed</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="intensity" class="form-label">Intensity (1-10):</label>
+        <input type="number" id="intensity" name="intensity" class="form-control" min="1" max="10" value="{{mood.intensity}}" required>
+      </div>
+      <div class="mb-3">
+        <label for="notes" class="form-label">Notes:</label>
+        <textarea id="notes" name="notes" class="form-control" rows="4">{{mood.notes}}</textarea>
+      </div>
+      <div class="mb-3">
+        <label for="date" class="form-label">Date:</label>
+        <input type="date" id="date" name="date" class="form-control" value="{{mood.date}}" required>
+      </div>
+      <button type="submit" class="btn btn-success">Update Entry</button>
+      <a href="/mood" class="btn btn-secondary">Cancel</a>
+    </form>
+  </div>
+</div>

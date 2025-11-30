@@ -1,5 +1,33 @@
 <h1>{{title}}</h1>
-<a href="/meals/add" class="btn btn-primary">Add New Meal</a>
-<div class="meals-list">
-  <p>Your meals will appear here.</p>
+<a href="/meals/add" class="btn btn-primary mb-3">Add New Meal</a>
+<div class="row">
+  {{#if meals.length}}
+    {{#each meals}}
+      <div class="col-md-6 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <p class="card-text">
+              <strong>Calories:</strong> {{this.calories}}<br>
+              <strong>Type:</strong> {{this.mealType}}<br>
+              <strong>Date:</strong> {{this.date}}<br>
+              {{#if this.notes}}
+                <strong>Notes:</strong> {{this.notes}}
+              {{/if}}
+            </p>
+            <a href="/meals/edit/{{this._id}}" class="btn btn-sm btn-warning">Edit</a>
+            <form method="POST" action="/meals/delete/{{this._id}}" style="display:inline;">
+              <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+    <div class="col-12">
+      <div class="alert alert-info">
+        No meals
+      </div>
+    </div>
+  {{/if}}
 </div>

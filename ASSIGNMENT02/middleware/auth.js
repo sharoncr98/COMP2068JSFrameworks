@@ -1,4 +1,7 @@
 function ensureAuthenticated(req, res, next) {
+  console.log('Checking authentication...');
+  console.log('req.isAuthenticated():', req.isAuthenticated());
+  console.log('req.user:', req.user);
   if (req.isAuthenticated()) {
     return next();
   }

@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const Meal = require('../models/Meal');
 const { ensureAuthenticated } = require('../middleware/auth');
 router.use(ensureAuthenticated);
 //meal list

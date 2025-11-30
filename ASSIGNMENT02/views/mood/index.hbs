@@ -1,5 +1,30 @@
 <h1>{{title}}</h1>
-<a href="/mood/add" class="btn btn-primary">Log Mood</a>
-<div class="mood-list">
-  <p>Your mood entries will appear here.</p>
+<a href="/mood/add" class="btn btn-primary mb-3">Log Mood</a>
+<div class="row">
+  {{#if moods.length}}
+    {{#each moods}}
+      <div class="col-md-6 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{this.mood}} ({{this.intensity}}/10)</h5>
+            <p class="card-text">
+              <strong>Date:</strong> {{this.date}}<br>
+              {{#if this.notes}}
+                <strong>Notes:</strong> {{this.notes}}
+              {{/if}}
+            </p>
+            <a href="/mood/edit/{{this._id}}" class="btn btn-sm btn-warning">Edit</a>
+            <form method="POST" action="/mood/delete/{{this._id}}" style="display:inline;">
+              <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+    <div class="col-12">
+      <div class="alert alert-info">
+        No mood entries
+      </div>
+    </div>
+  {{/if}}
 </div>

@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const Mood = require('../models/Mood');
 const { ensureAuthenticated } = require('../middleware/auth');
 router.use(ensureAuthenticated);
 //mood list

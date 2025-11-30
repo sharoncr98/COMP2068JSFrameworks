@@ -60,10 +60,6 @@ app.use("/workouts", require("./routes/workouts"));
 app.use("/meals", require("./routes/meals"));
 app.use("/mood", require("./routes/mood"));
 app.use("/api", require("./routes/api"));
-app.use("/notifications", require("./routes/notifications"));
-
-
-
 
 
 //error handling

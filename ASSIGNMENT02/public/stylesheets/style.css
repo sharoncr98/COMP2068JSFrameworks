@@ -4,6 +4,14 @@
   --accent: #ADBA5E;
   --dark: #869A69;
 }
+body, html {
+  height: 100%;
+  background-color: var(--secondary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main-wrapper {
+  min-height: calc(100vh - 140px);
+}
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--secondary);
